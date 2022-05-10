@@ -1,11 +1,10 @@
 import sys
 
-def strip(word: str):
-    return word.strip()
+
 
 def fmt(word: str):
     words = word.split("|")
-    words = list(map(strip, words))
+    words = list(map(str.strip, words))
     val = ""
     for i in words[1]:
         val += f"{words[0]}{i}, "
